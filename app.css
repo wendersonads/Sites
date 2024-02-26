@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: auto;
+    position: absolute;
+    background-image: url('./imagens/amarela.png');
+}
+
+.container {
+    background-color: rgba(168, 160, 44, 0.288);
+    border-radius: 14px;
+    margin: 14px;
+    max-width: 400px;
+    width: 80%; 
+}
+
+.header {
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: -15px;
+    margin-left: -15px; */
+}
+
+/* .form-row .form-group {
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%; /* Para dividir em colunas igualmente 
+} */
+
+button[type="submit"] {
+    width: 100%; /* Ou ajuste para a largura desejada */
+}
