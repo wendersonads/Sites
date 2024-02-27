@@ -8,6 +8,21 @@ const celular = document.getElementById("celular");
 const cep = document.getElementById("cep");
 const cidade = document.getElementById("cidade");
 const uf = document.getElementById("uf");
+const logradouro = document.getElementById("logra");
+const bairro = document.getElementById("bairro");
+
+function limparFormulario() {
+    nome.value = "";
+    cpfCnpj.value = "";
+    dataNasc.value = "";
+    email.value = "";
+    celular.value = "";
+    cep.value = "";
+    cidade.value = "";
+    uf.value = "";
+    logradouro.value = "";
+    bairro.value = "";
+}
 
 
 function validarDados() {
@@ -20,8 +35,8 @@ function validarDados() {
     var dadoCep = cep.value;
     var dadoCidade = cidade.value;
     var dadoUf = uf.value; 
-
-
+    var dadoLogra = logradouro.value;
+    var dadoBairro = bairro.value;
 
     if (!validaCpfCnpj(dadoCpfCnpj)) {
         alert("CPF ou CNPF inválido!!!");
@@ -37,7 +52,9 @@ function validarDados() {
     mensagem += "Celular: " + dadoCelular + "\n";
     mensagem += "CEP: " + dadoCep + "\n";
     mensagem += "Cidade: " + dadoCidade + "\n";
-    mensagem += "UF: " + dadoUf + "\n\n";
+    mensagem += "UF: " + dadoUf + "\n";
+    mensagem += "Logradouro: " + dadoLogra + "\n";
+    mensagem += "Bairro: " + dadoBairro + "\n";
 
     var params = {
      email: 'aasolarma@gmail.com',
@@ -50,10 +67,10 @@ function validarDados() {
     emailjs.send("service_3ko5ipk","template_s69rum8", params).then(function(response){
         if (response.status == 200) {
             alert("Dados enviados com sucesso!");
+            limparFormulario();
         }
     },function(error){
         alert("Erro ao enviar e-mail. Por favor, tente novamente." + error);
-
     }
     );
 }
@@ -210,6 +227,7 @@ var SPMaskBehavior = function (val) {
 
 $('#celular').mask(SPMaskBehavior, spOptions);
 
+$('#dataNasc').mask('99/99/9999');
 $(document).ready(function () {
     $('#cep').on('blur', function () {
     var cep = $(this).val().replace(/\D/g, '');
@@ -224,6 +242,8 @@ $(document).ready(function () {
             console.log(data);
           $('#uf').val(data.uf);
           $('#cidade').val(data.localidade);
+          $('#logra').val(data.logradouro);
+          $('#bairro').val(data.bairro);
         } else {
           alert('CEP não encontrado');
         }

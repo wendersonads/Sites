@@ -18,59 +18,76 @@
 
   <body>
     <div class="container">
-        <section class="header">
-            <h2>Dados Pessoais</h2>
-        </section>
-        <form id="form">
-            <div class="form-row">
-    
-                <div class="col-md-12">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+       <div class="form-image">
+        <img src="imagens/amarela.png" alt="">
+       </div>
+        <div class="form">
+            <form id="form" action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1> Dados Pessoais</h1>
+                    </div>
                 </div>
-    
-                <div class="col-md-6 col-sm-12">
-                    <label for="cpfCnpf">CPF ou CNPJ</label>
-                    <input type="text" class="form-control" id="cpfCnpf" required>
-                </div>
-          
-            
-                <div class="col-md-6 col-sm-12">
-                    <label for="dataNasc">Data de Nascimento</label>
-                    <input type="date" class="form-control" id="dataNasc" required>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-            
-           
-                <div class="col-md-6 col-sm-12">
-                    <label for="celular">Celular</label>
-                    <input type="text" class="form-control" id="celular" required>
-                </div>
-    
-                <div class="col-md-6 col-sm-12">
-                    <label for="cep">CEP</label>
-                    <input type="text" class="form-control" id="cep" required>
-                </div>
-    
-                <div class="col-md-3 col-sm-12">
-                    <label for="uf">UF</label>
-                    <input type="text" class="form-control" id="uf" readonly required>
-                </div>
-    
-                <div class="col-md-3 col-sm-12">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" readonly required>
-                </div>
-          
-           
-            </div>
-            <br>
-        
-            <button class="btn btn-primary" type="submit">Enviar</button>
+
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cpfCnpf">CPF ou CNPJ</label>
+                        <input type="text"  id="cpfCnpf" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="dataNasc">Data de Nascimento</label>
+                        <input type="text"  id="dataNasc" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email"  id="email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="celular">Celular</label>
+                        <input type="text" id="celular" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cep">CEP</label>
+                        <input type="text"  id="cep" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="uf">UF</label>
+                        <input type="text"  id="uf" readonly required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cidade">Cidade</label>
+                        <input type="text"  id="cidade" readonly required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="logra">Logradouro</label>
+                        <input type="text"  id="logra" readonly required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="bairro">Bairro</label>
+                        <input type="text"  id="bairro" readonly required>
+                    </div>
+                </div> 
+
+                <div class="button">
+                    <button type="submit">Enviar</button>
+                </div>  
         </form>
+               
+        </div>
     </div>
   </body>
 </html>

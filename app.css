@@ -1,39 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Inter', sans-serif;
+
+}
 body {
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: auto;
-    position: absolute;
-    background-image: url('./imagens/amarela.png');
 }
 
 .container {
-    background-color: rgba(168, 160, 44, 0.288);
-    border-radius: 14px;
-    margin: 14px;
-    max-width: 400px;
-    width: 80%; 
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0, 0, .212);
+}
+.form-image{
+    width: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #fde3a7d7; 
+    padding: 1rem;
+}
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7eedbd7;
+    padding: 3rem;
 }
 
-.header {
-    text-align: center;
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
 }
 
-.form-row {
+.input-group{
     display: flex;
     flex-wrap: wrap;
-    /* margin-right: -15px;
-    margin-left: -15px; */
+    justify-content: space-between;
+    padding: 1rem 0;
 }
 
-/* .form-row .form-group {
-    padding-right: 15px;
-    padding-left: 15px;
-    flex: 0 0 50%; /* Para dividir em colunas igualmente 
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+ .input-box input {
+    margin: 0.3rem 0;
+    padding: 0.4rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover{
+    background-color: rgb(233, 233, 217);
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #f7eedbd7;
+}
+
+.input-box label,
+.gender-title h6{
+    font-size: 0.90rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+ .button button{
+  width: 100%;
+  border: none;
+  background-color: darkorange;
+  padding: 0.62rem; 
+  border-radius:  5px;
+  cursor: pointer;
+} 
+
+.button button:hover{
+    background-color: #fde3a7d7;
+}
+
+ .button button a {
+    text-decoration: none;
+    font-size: 5.0;
+    font-weight: 800;
+    color: #000000c0;
+} 
+
+@media screen and (max-width: 1330px){
+    .form-image{
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 1064px) {
+
+        .container{
+            width: 100%;
+            height: auto;
+        }
+        .input-group{
+            flex-direction: column;
+            overflow-y: scroll;
+            flex-wrap: nowrap;
+            max-width: 20rem;
+        }
+}
+
+/* .form-image img{
+width: 31rem;
+
+
 } */
-
-button[type="submit"] {
-    width: 100%; /* Ou ajuste para a largura desejada */
-}
